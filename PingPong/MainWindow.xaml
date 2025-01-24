@@ -27,10 +27,24 @@
                     <StackPanel>
                         <Button Content="Light/Dark Theme" Margin="16" Click="ToggleTheme_Click"/>
                         <Separator/>
-                        <Button Content="Toggle Game Sound" Margin="16" Click="ToggleGameSound_Click"/>
-                        <Button Content="Toggle Music" Margin="16" Click="ToggleMusic_Click"/>
+                        <Button Margin="16" Click="ToggleGameSound_Click">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <materialDesign:PackIcon Kind="VolumeHigh" Width="24" Height="24" Margin="0,0,10,0" x:Name="SoundIcon"/>
+                                    <TextBlock Text="Toggle Game Sound" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Margin="16" Click="ToggleMusic_Click">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <materialDesign:PackIcon Kind="VolumeHigh" Width="24" Height="24" Margin="0,0,10,0" x:Name="MusicIcon"/>
+                                    <TextBlock Text="Toggle Music" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
                         <Separator/>
-                        <Button Content="View High Scores" Margin="16" Click="ViewHighScores_Click"/>
+                        <Button Content="View Scores" Margin="16" Click="ViewHighScores_Click"/>
                     </StackPanel>
                 </DockPanel>
             </materialDesign:DrawerHost.LeftDrawerContent>

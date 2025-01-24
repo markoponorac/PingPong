@@ -52,14 +52,28 @@ namespace PingPong
         private void ToggleGameSound_Click(object sender, RoutedEventArgs e)
         {
             SoundManager.IsSoundEnabled = !SoundManager.IsSoundEnabled;
+            if (SoundManager.IsSoundEnabled)
+            {
+                SoundIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.VolumeHigh;
+            }
+            else
+            {
+                SoundIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.VolumeMute;
+            }
         }
 
         private void ToggleMusic_Click(object sender, RoutedEventArgs e)
         {
             if (MusicManager.IsMusicPlaying())
+            {
                 MusicManager.PauseMusic();
+                MusicIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.VolumeMute;
+            }
             else
+            {
                 MusicManager.PlayMusic();
+                MusicIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.VolumeHigh;
+            }
         }
 
         private void ViewHighScores_Click(object sender, RoutedEventArgs e)

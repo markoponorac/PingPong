@@ -80,10 +80,6 @@ namespace PingPong
             this.Close();
         }
 
-        private void RefreshScores_Click(object sender, RoutedEventArgs e)
-        {
-            LoadScores();
-        }
 
         private void ClearScores_Click(object sender, RoutedEventArgs e)
         {
